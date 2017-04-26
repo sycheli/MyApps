@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" 
+             xmlns:local="clr-namespace:MyApps.ViewsModel;assembly=MyApps"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             xmlns:v="clr-namespace:MyApps;assembly=MyApps"
+             x:Class="MyApps.Views.Offre"
+             Title = "Offre"
+             >
+ 
+    <ContentPage.Content >
+      <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="bg.png" Aspect="AspectFill"/>
+        <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+          <StackLayout Opacity="1" Orientation="Vertical" >
+            <ListView x:Name="RestaurantListView"  HasUnevenRows="True" >
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell>
+                    <StackLayout Spacing="0" Padding="5,5,5,5">
+                      <StackLayout Orientation="Horizontal" BackgroundColor="White" >
+                        <Image  Source="{Binding img}"  HeightRequest="100" WidthRequest="100"/>
+                        <StackLayout Orientation="Vertical">                          
+                            <Label Text="{Binding name}" FontSize="16" TextColor="Green"  FontFamily="Times New Roman"/>                         
+                            <Label Text="-50%" FontSize="16" TextColor="Red" />                         
+                        </StackLayout>
+                      </StackLayout>
+                    </StackLayout>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+
+
+            <StackLayout Orientation="Horizontal" Opacity="1" HorizontalOptions="FillAndExpand">
+              <Grid >
+                <Image Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" Source="tajine.png" >
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="tapImage" NumberOfTapsRequired="1" />
+                  </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="0" Grid.Column="3" HeightRequest="40" WidthRequest="40" Source="tajine.png" >
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="tapImage1" NumberOfTapsRequired="1" />
+                  </Image.GestureRecognizers>
+                </Image>
+                <Image  Grid.Row="0" Grid.Column="6" HeightRequest="40" WidthRequest="40" Source="tajine.png"  >
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="tapImage2" NumberOfTapsRequired="1" />
+                  </Image.GestureRecognizers>
+                </Image>
+                <Image  Grid.Row="0" Grid.Column="9" HeightRequest="40" WidthRequest="40" Source="tajine.png" >
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="tapImage3" NumberOfTapsRequired="1" />
+                  </Image.GestureRecognizers>
+                </Image>
+              </Grid>
+            </StackLayout>
+            <!--<local:CircularProgressControl x:Name="progressControl" Progress="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="60" HeightRequest="60"/>-->
+          </StackLayout>
+        </ScrollView>
+      </AbsoluteLayout>
+    </ContentPage.Content>
+
+   
+
+</ContentPage>

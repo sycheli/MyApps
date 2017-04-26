@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyApps.Behaviors;assembly=MyApps" 
+             xmlns:locals="clr-namespace:MyApps;assembly=MyApps"
+             x:Class="MyApps.DetailPage"
+             >
+  
+  <StackLayout BackgroundColor="White">
+    <StackLayout Padding="5,5,5,5" BackgroundColor="White">
+      <Image x:Name="image" Source="{Binding img}" Aspect="AspectFill" />
+      <Grid Grid.Row="0" HorizontalOptions="Fill" >
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" x:Name="name" Text="{Binding name} " FontFamily="Times New Roman" FontSize="20" TextColor="Green" VerticalOptions="Center"/>
+        <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HeightRequest="50">
+          <Grid>
+            <Grid.Behaviors>
+              <local:StarBehavior x:Name="starOne" GroupName="myStar"/>
+            </Grid.Behaviors>
+            <Image x:Name="starBlankOne"
+                    Source="star_outline.png" />
+
+            <Image x:Name="starSelectedOne"
+                    Source="star_selected.png"
+                    IsVisible="{Binding Source={x:Reference starOne},
+                                    Path=IsStarred}"/>
+          </Grid>
+          <Grid >
+            <Grid.Behaviors>
+              <local:StarBehavior x:Name="starTwo" GroupName="myStar"/>
+            </Grid.Behaviors>
+            <Image x:Name="starBlankTwo"
+                    Source="star_outline.png" />
+
+            <Image x:Name="starSelectedTwo"
+                    Source="star_selected.png"
+                    IsVisible="{Binding Source={x:Reference starTwo},
+                                    Path=IsStarred}"/>
+          </Grid>
+          <Grid >
+            <Grid.Behaviors>
+              <local:StarBehavior x:Name="starThree" GroupName="myStar"/>
+            </Grid.Behaviors>
+            <Image x:Name="starBlankThree"
+                    Source="star_outline.png" />
+
+            <Image x:Name="starSelectedThree"
+                    Source="star_selected.png"
+                    IsVisible="{Binding Source={x:Reference starThree},
+                                    Path=IsStarred}"/>
+          </Grid>
+          <Grid >
+            <Grid.Behaviors>
+              <local:StarBehavior x:Name="starFour" GroupName="myStar"/>
+            </Grid.Behaviors>
+            <Image x:Name="starBlankFour"
+                    Source="star_outline.png" />
+
+            <Image x:Name="starSelectedFour"
+                    Source="star_selected.png"
+                    IsVisible="{Binding Source={x:Reference starFour},
+                                    Path=IsStarred}"/>
+          </Grid>
+          <Grid >
+            <Grid.Behaviors>
+              <local:StarBehavior x:Name="starFive" GroupName="myStar"/>
+            </Grid.Behaviors>
+            <Image x:Name="starBlankFive"
+                    Source="star_outline.png" />
+
+            <Image x:Name="starSelectedFive"
+                    Source="star_selected.png"
+                    IsVisible="{Binding Source={x:Reference starFive},
+                                    Path=IsStarred}"/>
+          </Grid>
+        </StackLayout>
+    
+      </Grid>
+      <Grid Grid.Row="1" HorizontalOptions="Fill" >
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="description" Text="{Binding description}" FontFamily="arial" FontSize="12" LineBreakMode="WordWrap" />
+      </Grid>
+         
+    </StackLayout>
+    
+    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30" VerticalOptions="EndAndExpand" >
+      <Button Text="Commander" TextColor="White" BackgroundColor="#1FBED6" BorderColor="White" BorderRadius="15" BorderWidth="2" HeightRequest="40" WidthRequest="150" />
+      <Button Text="Aller à" TextColor="White"  BackgroundColor="#1FBED6" BorderColor="White" BorderRadius="15" BorderWidth="2"  HeightRequest="40" WidthRequest="150" Clicked="Allerà"/>
+
+    </StackLayout>
+  </StackLayout>
+
+  
+  
+
+</ContentPage>

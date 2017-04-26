@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             x:Class="MyApps.ViewPage">
+  <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="bg.png" Aspect="AspectFill"/>
+    <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+
+      <StackLayout Orientation="Vertical"   Padding="20,100,10,20">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Spacing="10" >
+          <Button Text="Connexion"
+                  TextColor="White"
+                  BackgroundColor="#0ec1c5"
+                  BorderColor="White"
+                  BorderRadius="15"
+                  BorderWidth="2"
+                  HeightRequest="40"
+                  WidthRequest="150"
+                  Clicked="Connecter"
+                />
+          <Button Text="Créez profil utilisateur"
+                  TextColor="White"
+                  BackgroundColor="#0ec1c5"
+                  BorderColor="White"
+                  BorderRadius="15"
+                  BorderWidth="2"
+                  HeightRequest="40"
+                  WidthRequest="150"
+                  Clicked="Inscrire" />
+          <!--<Image Source="fblogin.png"  HeightRequest="40" WidthRequest="150"></Image>-->
+        </StackLayout>
+        <!--<Button Text="Connexion avec Facebook"
+                TextColor="White"
+                BackgroundColor="#3B5998"
+                BorderColor="White"
+                BorderRadius="15"
+                BorderWidth="2"
+                HeightRequest="40"
+                WidthRequest="300"
+                Clicked="Facebook" />-->
+
+
+
+      </StackLayout>
+    </ScrollView>
+  </AbsoluteLayout>
+</ContentPage>

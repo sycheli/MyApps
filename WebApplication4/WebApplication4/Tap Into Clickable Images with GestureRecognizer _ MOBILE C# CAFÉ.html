@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tap Into Clickable Images with GestureRecognizer | MOBILE C# CAFÉ</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://mobilecafe.lexiconsystemsinc.com/xmlrpc.php">
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="MOBILE C# CAFÉ &raquo; Feed" href="http://mobilecafe.lexiconsystemsinc.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="MOBILE C# CAFÉ &raquo; Comments Feed" href="http://mobilecafe.lexiconsystemsinc.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="MOBILE C# CAFÉ &raquo; Tap Into Clickable Images with GestureRecognizer Comments Feed" href="http://mobilecafe.lexiconsystemsinc.com/xamarin-forms/id-tap-that-clickable-images-with-gesturerecognizer/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/mobilecafe.lexiconsystemsinc.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='penscratch-style-css'  href='http://mobilecafe.lexiconsystemsinc.com/wp-content/themes/penscratch/style.css?ver=4.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-fonts-css'  href='//fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://mobilecafe.lexiconsystemsinc.com/wp-content/themes/penscratch/genericons/genericons.css?ver=3.0.3' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='http://mobilecafe.lexiconsystemsinc.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mobilecafe.lexiconsystemsinc.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mobilecafe.lexiconsystemsinc.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Xamarin Book Available!' href='http://mobilecafe.lexiconsystemsinc.com/uncategorized/xamarin-book-available/' />
+<link rel='next' title='Making a Scrollable List Using ListView' href='http://mobilecafe.lexiconsystemsinc.com/xamarin-forms/making-a-scrollable-list-using-listview/' />
+<meta name="generator" content="WordPress 4.7.3" />
+<link rel="canonical" href="http://mobilecafe.lexiconsystemsinc.com/xamarin-forms/id-tap-that-clickable-images-with-gesturerecognizer/" />
+<link rel='shortlink' href='http://mobilecafe.lexiconsystemsinc.com/?p=2037' />
+<link rel="alternate" type="application/json+oembed" href="http://mobilecafe.lexiconsystemsinc.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmobilecafe.lexiconsystemsinc.com%2Fxamarin-forms%2Fid-tap-that-clickable-images-with-gesturerecognizer%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://mobilecafe.lexiconsystemsinc.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmobilecafe.lexiconsystemsinc.com%2Fxamarin-forms%2Fid-tap-that-clickable-images-with-gesturerecognizer%2F&#038;format=xml" />
+</head>
+
+<body class="post-template-default single single-post postid-2037 single-format-standard group-blog">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+						<h1 class="site-title"><a href="http://mobilecafe.lexiconsystemsinc.com/" rel="home">MOBILE C# CAFÉ</a></h1>
+			<h2 class="site-description">a blog by Dan Hermes about Xamarin App Development</h2>
+		</div>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<div class="menu"><ul>
+<li ><a href="http://mobilecafe.lexiconsystemsinc.com/">Home</a></li><li class="page_item page-item-2044"><a href="http://mobilecafe.lexiconsystemsinc.com/xamarin-book/">Xamarin Book</a></li>
+<li class="page_item page-item-295"><a href="http://mobilecafe.lexiconsystemsinc.com/about-dan/">About</a></li>
+<li class="page_item page-item-59"><a href="http://mobilecafe.lexiconsystemsinc.com/contact/">Contact</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-2037" class="post-2037 post type-post status-publish format-standard hentry category-xamarin-forms">
+	<header class="entry-header">
+		<h1 class="entry-title">Tap Into Clickable Images with GestureRecognizer</h1>
+		<div class="entry-meta">
+						<span class="posted-on"><a href="http://mobilecafe.lexiconsystemsinc.com/xamarin-forms/id-tap-that-clickable-images-with-gesturerecognizer/" rel="bookmark"><time class="entry-date published" datetime="2015-07-16T12:38:28+00:00">July 16, 2015</time><time class="updated" datetime="2015-07-26T14:12:52+00:00">July 26, 2015</time></a></span><span class="byline"><span class="sep"> ~ </span><span class="author vcard"><a class="url fn n" href="http://mobilecafe.lexiconsystemsinc.com/author/admin-2/">Dan Hermes</a></span></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Tappable images and icons are common in mobile applications for actions and navigation. Like many Xamarin.Forms views, the Image doesn’t have a click or tap event and must be wired up using the <code>GestureRecognizer</code> class. A gesture recognizer is a class that can be added to many views to respond to user interaction. It currently supports just the tap gesture. The terms <em>click</em> and <em>tap</em> are used interchangeably in mobile UI development.</p>
+<p>First we need to start with an image on our ContentPage. The Image view holds an image for display on your page from a local or online file:</p>
+<pre class="cscode"><code>    Image image = <span class="key">new</span> Image
+    {
+        Source = “monkey.png”,
+        Aspect = Aspect.AspectFit,
+        HorizontalOptions = LayoutOptions.End,
+        VerticalOptions = LayoutOptions.Fill
+    };</code></pre>
+<p>This is part of a larger example which shows the monkey image at the bottom right.</p>
+<p><a href="http://mobilecafe.lexiconsystemsinc.com/wp-content/uploads/2015/04/Android_Code_Completeblog1.png"><img class="alignnone size-medium wp-image-2060" src="http://mobilecafe.lexiconsystemsinc.com/wp-content/uploads/2015/04/Android_Code_Completeblog1-300x215.png" alt="Android_Code_Completeblog" width="300" height="215" srcset="http://mobilecafe.lexiconsystemsinc.com/wp-content/uploads/2015/04/Android_Code_Completeblog1-300x215.png 300w, http://mobilecafe.lexiconsystemsinc.com/wp-content/uploads/2015/04/Android_Code_Completeblog1.png 500w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Now for the gesture recognizer.</p>
+<p>Declare the gesture recognizer and a handler to create and manage the Tapped event, then the gesture recognizer is added to the target view, an image in this case. Change the image’s Opacity to .5 in the handler, which will fade the image slightly when tapped.</p>
+<pre class="cscode"><code>    <span class="key">var</span> tapGestureRecognizer = <span class="key">new</span> TapGestureRecognizer();
+    tapGestureRecognizer.Tapped += (s, e) =&gt; {
+        image.Opacity = .5;
+    };
+    image.GestureRecognizers.Add(tapGestureRecognizer);</code></pre>
+<p>Give that a try  so you can see that the gesture recognizer works.</p>
+<p>An alternative implementation of <code>GestureRecognizer</code> uses the <code>Command</code> property.</p>
+<pre class="cscode"><code>    image.GestureRecognizers.Add (<span class="key">new</span> TapGestureRecognizer {
+       Command = <span class="key">new</span> Command (()=&gt; { <span class="com">/*handle tap*/</span> }),
+    });</code></pre>
+<p>User feedback is a crucial concept in mobile UI development. Any time a user does something in the UI there should be some subtle acknowledgment by the app. A tap, for instance, should respond to the user with visible feedback. Usually an image will gray out or have a white background for a sec when touched. Let’s do that professionally using the image’s <code>Opacity</code> property but adding async/await to create a slight delay in our fade without affecting the app’s performance.</p>
+<p>Replace the Tapped handler with this one that will cause the image to fade slightly for a fraction of a second. Remember to add using System.Threading.Tasks; to the top of your file for async/await.</p>
+<pre class="cscode"><code>  tapGestureRecognizer.Tapped +=  <span class="key">async</span> (sender, e) =&gt;
+        {
+            image.Opacity = .5;
+            <span class="key">await</span> Task.Delay(200);
+            image.Opacity = 1;
+        };</code></pre>
+<p>Tapping on the image will now fade the image slightly, then back to normal, providing a responsive user experience.</p>
+<p>In your own projects you’ll use gesture recognizers (and <code>async/await</code>) to actually <em>do</em> something when an image is tapped. If you want to see <code>async/await</code> in action in this example, bump up the Delay to 2000, then try and do something else in your app (like tap another button, for example) and and you’ll see that the app is still responsive. You could do many things in this <code>Tapped</code> handler without interrupting the flow of the app. Often when a button or image is pressed, the result should be backgrounded using async/await for an optimal user experience.</p>
+<p>Check out this free GitHub example <a href="https://github.com/danhermes/xamarin-book-examples/tree/master/Chapter%202%20-%20Xamarin.Forms%20Intro">here</a>. Check out my book that all this is based on <a href="http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/ref=sr_1_4?ie=UTF8&amp;qid=1428719958&amp;sr=8-4&amp;keywords=xamarin">here</a>.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+				<span class="cat-links">
+			Posted in <a href="http://mobilecafe.lexiconsystemsinc.com/category/xamarin-forms/" rel="category tag">Xamarin.Forms</a>		</span>
+					</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="http://mobilecafe.lexiconsystemsinc.com/uncategorized/xamarin-book-available/" rel="prev"><span class="meta-nav">< Previous</span> Xamarin Book Available!</a></div><div class="nav-next"><a href="http://mobilecafe.lexiconsystemsinc.com/xamarin-forms/making-a-scrollable-list-using-listview/" rel="next"><span class="meta-nav">Next ></span> Making a Scrollable List Using ListView</a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			One thought on &ldquo;<span>Tap Into Clickable Images with GestureRecognizer</span>&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-669" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://dineshramitc.wordpress.com/2015/07/30/tap-into-clickable-images-with-gesturerecognizer/' rel='external nofollow' class='url'>Tap Into Clickable Images with GestureRecognizer | Dinesh Ram Kali.</a> 			</div>
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/xamarin-forms/id-tap-that-clickable-images-with-gesturerecognizer/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://mobilecafe.lexiconsystemsinc.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='2037' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="df4f8739d0" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="3"/></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<div id="secondary" class="widget-area" role="complementary">
+		<aside id="text-2" class="widget widget_text"><h1 class="widget-title">Dan Hermes</h1>			<div class="textwidget">	<img width="175" height="235" src="http://lexiconsystemsinc.com/images/DanHermesWeb.png"/>
+<span class="gray-text">Xamarin MVP<br>
+.NET software consultant<br>
+tiki cocktail mixologist<br>
+author<br>
+<a href="https://twitter.com/danhermes">@danhermes
+</a>
+</span><br><br>
+<a href="http://www.amazon.com/Xamarin-Application-Development-Cross-Platform-Xamarin-Forms/dp/1484202155/ref=sr_1_2?ie=UTF8&amp;qid=1408410136&amp;sr=8-2&amp;keywords=dan+hermes"><img class="alignnone size-full wp-image-1968" src="http://lexiconsystemsinc.com/images/mobile/XamarinCover.png" alt="Xamarin-Application-Development-Coversm" width="270" height="333" /></a>
+<a href="http://mobilecafe.lexiconsystemsinc.com/events/dan-hermes-xamarin-book-tour-2016/">BOOK TOUR SCHEDULE</a></div>
+		</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+					<li>
+				<a href="http://mobilecafe.lexiconsystemsinc.com/mobile/enterprise-data-access-patterns-in-xamarin/">The Compleat History of Data Access Patterns</a>
+						</li>
+					<li>
+				<a href="http://mobilecafe.lexiconsystemsinc.com/mobile/how-to-mobilize-web-and-desktop-business-apps/">How to Mobilize Web and Desktop Business Apps</a>
+						</li>
+					<li>
+				<a href="http://mobilecafe.lexiconsystemsinc.com/mobile/xamarin-dev-days-2016/">Xamarin Dev Days 2016 Recap</a>
+						</li>
+					<li>
+				<a href="http://mobilecafe.lexiconsystemsinc.com/xamarin-book/podcast-interviews-with-dan-hermes-microsoft-xamarin-forms-his-music-and-his-tiki-drinks/">Podcast Interviews with Dan Hermes: Microsoft, Xamarin.Forms, His Music and His Tiki Drinks</a>
+						</li>
+					<li>
+				<a href="http://mobilecafe.lexiconsystemsinc.com/xamarin-forms/xamarin-forms-101-pages-and-layouts-and-views-oh-my/">Xamarin.Forms 101: Pages and Layouts and Views (Oh My)</a>
+						</li>
+				</ul>
+		</aside>			</div><!-- #secondary -->
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> ~ </span>
+			Theme: Penscratch by <a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>.		</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='http://mobilecafe.lexiconsystemsinc.com/wp-content/plugins/akismet/_inc/form.js?ver=3.3'></script>
+<script type='text/javascript' src='http://mobilecafe.lexiconsystemsinc.com/wp-content/themes/penscratch/js/navigation.js?ver=20120206'></script>
+<script type='text/javascript' src='http://mobilecafe.lexiconsystemsinc.com/wp-content/themes/penscratch/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript' src='http://mobilecafe.lexiconsystemsinc.com/wp-includes/js/comment-reply.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='http://mobilecafe.lexiconsystemsinc.com/wp-includes/js/wp-embed.min.js?ver=4.7.3'></script>
+
+</body>
+</html>
