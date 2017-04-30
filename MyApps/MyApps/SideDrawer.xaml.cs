@@ -47,14 +47,12 @@ namespace MyApps
          
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+           
             var item = (MasterPageItem)e.SelectedItem;           
             Type page = item.TargetType;
-
             Navigation.PushAsync((Page)Activator.CreateInstance(page));
+             IsPresented = false;
            
-            // navigationDrawerList.SelectedItem = null;
-            //IsPresented = false;
-            
         }
     }
 }

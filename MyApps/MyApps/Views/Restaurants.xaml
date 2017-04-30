@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyApps.Views.Restaurants"
-             Title = "Restaurants">
+             Title = "Restaurants"
+             SizeChanged="AbsolutePageXaml_SizeChanged">
   <ContentPage.Content >
     <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
       <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="bg.png" Aspect="AspectFill"/>
@@ -49,6 +50,27 @@
           </ListView>
         </StackLayout>
       </ScrollView>
+      <ContentView x:Name="bgLayer"
+                     BackgroundColor="Black"
+                     Opacity="0.5"
+                     IsVisible="False" />
+      <Frame x:Name="frameLayer"
+           BackgroundColor="White"
+           IsVisible="False">
+        <StackLayout>
+          <ActivityIndicator IsRunning="True">
+            <ActivityIndicator.Color>
+              <OnPlatform x:TypeArguments="Color"
+                          iOS="Default"
+                          Android="Default"
+                          WinPhone="Accent" />
+            </ActivityIndicator.Color>
+          </ActivityIndicator>
+          <Label Text="Data loading..."
+                 TextColor="Black"
+                 XAlign="Center" />
+        </StackLayout>
+      </Frame>
     </AbsoluteLayout>
     </ContentPage.Content >
   </ContentPage>

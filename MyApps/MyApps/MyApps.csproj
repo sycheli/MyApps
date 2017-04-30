@@ -61,7 +61,6 @@
     <Compile Include="SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewsModel\CircularProgressControl .cs" />
     <Compile Include="ViewsModel\Offres.cs" />
     <Compile Include="ViewsModel\Toast.cs" />
     <Compile Include="ViewPage.xaml.cs">

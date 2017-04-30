@@ -7,6 +7,7 @@
              xmlns:v="clr-namespace:MyApps;assembly=MyApps"
              x:Class="MyApps.Views.Offre"
              Title = "Offre"
+             SizeChanged="AbsolutePageXaml_SizeChanged"
              >
  
     <ContentPage.Content >
@@ -18,20 +19,22 @@
               <ListView.ItemTemplate>
                 <DataTemplate>
                   <ViewCell>
-                    <StackLayout Spacing="0" Padding="5,5,5,5">
+                    <StackLayout Spacing="0" Padding="7,7,7,0">
                       <StackLayout Orientation="Horizontal" BackgroundColor="White" >
-                        <Image  Source="{Binding img}"  HeightRequest="100" WidthRequest="100"/>
-                        <StackLayout Orientation="Vertical">                          
-                            <Label Text="{Binding name}" FontSize="16" TextColor="Green"  FontFamily="Times New Roman"/>                         
-                            <Label Text="-50%" FontSize="16" TextColor="Red" />                         
-                        </StackLayout>
+                        <Image Source="{Binding img}"  HeightRequest="100" WidthRequest="100"/>
+                            <StackLayout Orientation="Vertical">                   
+                            <Label  Text="{Binding name}" FontSize="16" TextColor="Green"  FontFamily="Times New Roman"/>
+                           
+                            <Label Text="-50%" FontSize="15" TextColor="Red"/>                         
+                      </StackLayout> 
                       </StackLayout>
                     </StackLayout>
                   </ViewCell>
                 </DataTemplate>
               </ListView.ItemTemplate>
             </ListView>
-
+            
+            
 
             <StackLayout Orientation="Horizontal" Opacity="1" HorizontalOptions="FillAndExpand">
               <Grid >
@@ -57,9 +60,32 @@
                 </Image>
               </Grid>
             </StackLayout>
-            <!--<local:CircularProgressControl x:Name="progressControl" Progress="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="60" HeightRequest="60"/>-->
+            
           </StackLayout>
+        
+
         </ScrollView>
+      <ContentView x:Name="bgLayer"
+                     BackgroundColor="Black"
+                     Opacity="0.5"
+                     IsVisible="False" />
+          <Frame x:Name="frameLayer"
+               BackgroundColor="White"
+               IsVisible="False">
+            <StackLayout>
+                <ActivityIndicator IsRunning="True">
+                    <ActivityIndicator.Color>
+                        <OnPlatform x:TypeArguments="Color"
+                                    iOS="Default"
+                                    Android="Default"
+                                    WinPhone="Accent" />
+                    </ActivityIndicator.Color>
+                </ActivityIndicator>
+                <Label Text="Data loading..."
+                       TextColor="Black"
+                       XAlign="Center" />
+            </StackLayout>
+        </Frame>
       </AbsoluteLayout>
     </ContentPage.Content>
 
