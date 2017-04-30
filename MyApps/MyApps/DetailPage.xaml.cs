@@ -12,7 +12,7 @@ namespace MyApps
 
         public DetailPage(Restaurant restaurant)
         {
-
+            Title = restaurant.name;
             this.restaurant = restaurant;
           
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace MyApps
             base.OnAppearing();
             var restaurants = new List<Restaurant>();
             restaurants.Add(restaurant);
-            name.Text = restaurant.name;
+           
             description.Text = restaurant.description;
             image.Source = restaurant.img;
 
