@@ -7,7 +7,7 @@
 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-	<application android:label="MyApps.Droid" android:largeHeap="true">
+	<application android:label="MyApps" android:largeHeap="true">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBAZu869TIsDznPeV79jYWsIHBHE5gmNmE" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	</application>
