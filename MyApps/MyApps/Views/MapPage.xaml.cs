@@ -34,7 +34,7 @@ namespace MyApps.Views
             
             foreach (Restaurant r in restaurants)
             {
-                
+                //
                 if (r.Longitude != null && r.Latitude != null) {
                      var pin = new Pin
                      {
