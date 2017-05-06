@@ -4,7 +4,7 @@
              x:Class="MyApps.App">
   <Application.Resources>
 
-    <!-- Application resource dictionary -->
+   
     <item name="actionBarSize">0dp</item>
   </Application.Resources>
 </Application>
