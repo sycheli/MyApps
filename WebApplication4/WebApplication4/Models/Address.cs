@@ -7,10 +7,11 @@ using System.Web;
 
 namespace WebApplication4.Models
 {
+    //[ComplexType]
     public class Address
     {
-        [Key ForeignKey("Restaurant")]
-        public int id { get; set; }
+     
+        //public int id { get; set; }
 
         public string street { get; set; }
         public Double zipCode { get; set; }
@@ -26,6 +27,6 @@ namespace WebApplication4.Models
 
        /* [ForeignKey("Restaurant")]
         public int? RestaurantId { get; set; }*/
-        public Restaurant Restaurant { get; set; }
+       // public Restaurant Restaurant { get; set; }
     }
 }

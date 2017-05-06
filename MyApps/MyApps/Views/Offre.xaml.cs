@@ -2,12 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 
 
 namespace MyApps.Views
@@ -45,13 +41,8 @@ namespace MyApps.Views
             };
         }
         protected override async void OnAppearing()
-        {
-            
+        {           
             await GetRestaurant();
-            
-
-
-
         }
         
         List<Restaurant> getListFromJson(String json)

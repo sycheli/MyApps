@@ -8,6 +8,12 @@ namespace WebApplication4.Models
 {
     public class User
     {
+        public User()
+        {
+        
+            this.address = new Address();
+
+        }
         public int ID { get; set; }
         [Required]
         public string userName { get; set; }
@@ -19,7 +25,9 @@ namespace WebApplication4.Models
         public string lastName { get; set; }
         [Required]
         public string email { get; set; }
+
         public string img { get; set; }
+        public string cover { get; set; }
 
 
         public virtual Address address { get; set; }

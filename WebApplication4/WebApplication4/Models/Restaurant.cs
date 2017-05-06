@@ -13,6 +13,7 @@ namespace WebApplication4.Models
         {
             this.Plates = new HashSet<Plate>();
             this.Points = new HashSet<Point>();
+            this.address = new Address();
 
         }
         [Key]
@@ -21,6 +22,7 @@ namespace WebApplication4.Models
         public string name { get; set; }
         public Double rate { get; set; }
         public string img { get; set; }
+        public string cover { get; set; }
         public int WinPointMin { get; set; }
 
         [ForeignKey("Manager")]

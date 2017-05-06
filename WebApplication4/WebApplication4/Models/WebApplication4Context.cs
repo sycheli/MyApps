@@ -18,12 +18,12 @@ namespace WebApplication4.Models
     
         public WebApplication4Context() : base("name=WebApplication4Context")
         {
-           this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
-            //this.Configuration.LazyLoadingEnabled = false;
-            //this.Configuration.ProxyCreationEnabled = false;
+          this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+          //  this.Configuration.LazyLoadingEnabled = false;
+         //   this.Configuration.ProxyCreationEnabled = false;
         }
 
-        public DbSet<Address> Addresses { get; set; }
+    
 
         public DbSet<Restaurant> Restaurants { get; set; }
 
