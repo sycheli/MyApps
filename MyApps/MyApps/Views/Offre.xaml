@@ -23,9 +23,8 @@
                       <StackLayout Orientation="Horizontal" BackgroundColor="White" >
                         <Image Source="{Binding img}"  HeightRequest="80" WidthRequest="80"/>
                             <StackLayout Orientation="Vertical">                   
-                            <Label  Text="{Binding name}" FontSize="16" TextColor="Green"  FontFamily="Times New Roman"/>
-                           
-                            <Label Text="-50%" FontSize="15" TextColor="Red"/>                         
+                            <Label  Text="{Binding name}" FontSize="14" TextColor="Black"  FontFamily="Times New Roman"/>
+                             <Label Text="{Binding price}" FontSize="12" TextColor="Green"/>                         
                       </StackLayout> 
                       </StackLayout>
                     </StackLayout>
