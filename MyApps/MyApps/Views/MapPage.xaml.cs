@@ -31,25 +31,25 @@ namespace MyApps.Views
             var pos = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
             MainMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(pos.Latitude,pos.Longitude), Distance.FromKilometers(1)));
 
-            List<Offres> restaurants = Offre.Offres;
+            List<Restaurant> restaurants = Restaurants.Restaurant;
             
-            foreach (Offres r in restaurants)
+            foreach (Restaurant r in restaurants)
             {
-                //
-                if (r.Longitude != null && r.Latitude != null) {
+                
+                
                      var pin = new Pin
                      {
                         
-                        Position = new Position(r.Latitude, r.Longitude),
+                        Position = new Position(r.address.Latitude, r.address.Longitude),
                         Label = r.description != null ? r.description : "No description !!!",
-                        Address = r.Address != null ? r.Address : "No address !!!",
+                        
                         
                     };
                     pin.Clicked += PinOnClicked;
 
                     MainMap.Pins.Add(pin);
                     
-                }
+                
             }
             
             

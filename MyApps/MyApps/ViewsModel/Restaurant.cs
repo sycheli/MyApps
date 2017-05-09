@@ -9,8 +9,7 @@ namespace MyApps
         public Address address { get; set; }
         public string description { get; set; }
         public string cover { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
+        
         public string street { get; set; }
         public string city { get; set; }
        
@@ -23,6 +22,7 @@ namespace MyApps
         public string city { get; set; }
         public string country { get; set; }
         public double zipCode { get; set; }
-
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }
