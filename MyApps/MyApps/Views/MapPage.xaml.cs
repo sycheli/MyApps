@@ -29,7 +29,7 @@ namespace MyApps.Views
             var locator = CrossGeolocator.Current;
             locator.DesiredAccuracy = 50;
             var pos = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
-            MainMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(pos.Latitude,pos.Longitude), Distance.FromKilometers(1)));
+            MainMap.MoveToRegion(MapSpan.FromCenterAndRadius(MyPosition, Distance.FromKilometers(1)));
 
             List<Restaurant> restaurants = Restaurants.Restaurant;
             

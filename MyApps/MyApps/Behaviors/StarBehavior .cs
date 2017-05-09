@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+
 namespace MyApps.Behaviors
 {
     public class StarBehavior : Behavior<View>

@@ -5,8 +5,6 @@
              x:Class="MyApps.NavPage"
              BarBackgroundColor="#00B0CD">
 
-
- 
     <view:Offre Title="List"/>
     <view:MapPage />
    
