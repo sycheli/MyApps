@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyApps.ViewsModel;assembly=MyApps"
              x:Class="MyApps.Views.Restaurants"
              Title = "Restaurants"
              SizeChanged="AbsolutePageXaml_SizeChanged">
-  <ContentPage.Content >
+    
+    <ContentPage.Content >
     <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
       <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="bg.png" Aspect="AspectFill"/>
       <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
@@ -13,33 +15,19 @@
             <ListView.ItemTemplate>
               <DataTemplate>
                 <ViewCell >
-                  <StackLayout Spacing="0" Padding="5,5,5,5">
+                  <StackLayout Spacing="0" Padding="7,7,7,0">
                     <StackLayout Orientation="Horizontal" BackgroundColor="White" >
-                      <Image  Source="{Binding img}"  HeightRequest="100" WidthRequest="100"/>
-                      <StackLayout Orientation="Vertical">
-                        <Grid Grid.Row="0" HorizontalOptions="Fill" >
-                          <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                          </Grid.RowDefinitions>
-                          <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                          </Grid.ColumnDefinitions>
-                          <Label Text="{Binding name}" FontSize="16" TextColor="Green" FontFamily="Times New Roman"/>
-                        </Grid>
-                        <Grid Grid.Row="1" HorizontalOptions="Fill" >
-                          <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                          </Grid.RowDefinitions>
-                          <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                          </Grid.ColumnDefinitions>
-                          <Image Grid.Row="0" Grid.Column="0" Source="marker1.png"/>
-                          <Label Grid.Row="0" Grid.Column="1"  Text="{Binding Addresses}" FontSize="12" TextColor="Black" FontFamily="Times New Roman"/>
-                        </Grid>
+                      <Image  Source="{Binding img}"  HeightRequest="80" WidthRequest="80"/>
+                      <StackLayout Orientation="Vertical">                        
+                       <Label Text="{Binding name}" FontSize="16" TextColor="Green" FontFamily="Times New Roman"/>
+                       
+                        <StackLayout Orientation="Horizontal">
+                         <Image Source="marker1.png"/>  
+                         <Label Text="{Binding address.street}" FontSize="9" TextColor="Black" FontFamily="Times New Roman"/>
+                         <Label Text="{Binding address.city}" FontSize="9" TextColor="Black" FontFamily="Times New Roman"/>
+                         <Label Text="{Binding address.country}" FontSize="9" TextColor="Black" FontFamily="Times New Roman"/>
+                         <Label Text="{Binding address.zipCode}" FontSize="9" TextColor="Black" FontFamily="Times New Roman"/>
+                        </StackLayout>        
                       </StackLayout>
                     </StackLayout>
 

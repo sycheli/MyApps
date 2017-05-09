@@ -1,4 +1,5 @@
-﻿using Plugin.Geolocator;
+﻿using MyApps.ViewsModel;
+using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -30,9 +31,9 @@ namespace MyApps.Views
             var pos = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
             MainMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(pos.Latitude,pos.Longitude), Distance.FromKilometers(1)));
 
-            List<Restaurant> restaurants = Offre.Restaurants;
+            List<Offres> restaurants = Offre.Offres;
             
-            foreach (Restaurant r in restaurants)
+            foreach (Offres r in restaurants)
             {
                 //
                 if (r.Longitude != null && r.Latitude != null) {
@@ -41,7 +42,7 @@ namespace MyApps.Views
                         
                         Position = new Position(r.Latitude, r.Longitude),
                         Label = r.description != null ? r.description : "No description !!!",
-                        Address = r.Addresses != null ? r.Addresses : "No address !!!",
+                        Address = r.Address != null ? r.Address : "No address !!!",
                         
                     };
                     pin.Clicked += PinOnClicked;

@@ -7,7 +7,7 @@
  
   <StackLayout BackgroundColor="White">
     <StackLayout Padding="5,5,5,5" BackgroundColor="White">
-      <Image x:Name="image" Source="{Binding ImagePath}" Aspect="AspectFill" />
+      <Image x:Name="image" Source="{Binding cover}" Aspect="AspectFill" />
       <Grid Grid.Row="0" HorizontalOptions="Fill" >
         <Grid.RowDefinitions>
           <RowDefinition Height="Auto" />
@@ -93,7 +93,7 @@
           <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Image Grid.Row="0" Grid.Column="0" Source="marker1.png"/>
-        <Label Grid.Row="0" Grid.Column="1" x:Name="Address" Text="{Binding Address}" FontSize="14" TextColor="Black" FontFamily="Times New Roman">
+        <Label Grid.Row="0" Grid.Column="1" x:Name="Address" Text="{Binding address}" FontSize="14" TextColor="Black" FontFamily="Times New Roman">
           <Label.GestureRecognizers>
             <TapGestureRecognizer x:Name="tapAdress" NumberOfTapsRequired="1" />
           </Label.GestureRecognizers>

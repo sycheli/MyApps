@@ -72,9 +72,6 @@
     <Compile Include="ViewsModel\Restaurant.cs" />
     <Compile Include="ViewsModel\SignUpPageCS.cs" />
     <Compile Include="ViewsModel\User.cs" />
-    <Compile Include="Views\MapPages.xaml.cs">
-      <DependentUpon>MapPages.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
@@ -222,12 +219,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MapPage.xaml">
-      <Generator>MsBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\MapPages.xaml">
       <Generator>MsBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

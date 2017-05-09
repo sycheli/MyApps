@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MyApps.ViewsModel;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -19,8 +20,8 @@ namespace MyApps.Views
             
             RestaurantListView.ItemSelected += async (sender, e) =>
             {
-                
-                Restaurant rest = e.SelectedItem as Restaurant;
+
+                Offres rest = e.SelectedItem as Offres;
                 if (e.SelectedItem != null)
                 {
                     bgLayer.IsVisible = true;
@@ -35,25 +36,25 @@ namespace MyApps.Views
                     RestaurantListView.SelectedItem = null;
             };
 
-            tapImage.Tapped += async (object sender, EventArgs e) =>
-            {
-                      await Navigation.PushAsync(new MapPage());
-            };
+            //tapImage.Tapped += async (object sender, EventArgs e) =>
+            //{
+            //          await Navigation.PushAsync(new MapPage());
+            //};
         }
         protected override async void OnAppearing()
         {           
             await GetRestaurant();
         }
         
-        List<Restaurant> getListFromJson(String json)
+        List<Offres> getListFromJson(String json)
         {
-            var Restaurants = JsonConvert.DeserializeObject<List<Restaurant>>(json);
+            var Offre = JsonConvert.DeserializeObject<List<Offres>>(json);
 
 
-            return Restaurants;
+            return Offre;
         }
 
-        public static List<Restaurant> Restaurants;
+        public static List<Offres> Offres;
         public async Task GetRestaurant()
         {
 
@@ -61,8 +62,8 @@ namespace MyApps.Views
 
 
             var json = await client.GetStringAsync("http://10.0.3.2:55469/api/plates");
-            Restaurants = getListFromJson(json);
-            RestaurantListView.ItemsSource = Restaurants;
+            Offres = getListFromJson(json);
+            RestaurantListView.ItemsSource = Offres;
 
             
         }

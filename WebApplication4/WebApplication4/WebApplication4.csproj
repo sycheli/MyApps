@@ -249,7 +249,6 @@
     <Compile Include="Models\Speciality.cs" />
     <Compile Include="Models\Timing.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UsersController.cs" />
     <Compile Include="Models\WebApplication4Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

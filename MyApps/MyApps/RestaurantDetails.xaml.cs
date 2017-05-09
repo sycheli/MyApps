@@ -32,8 +32,8 @@ namespace MyApps
             var restaurants = new List<Restaurant>();
             restaurants.Add(restaurant);
             name.Text = restaurant.name;
-            image.Source = restaurant.ImagePath;
-            Address.Text = restaurant.Addresses;
+            image.Source = restaurant.cover;
+            //Address.Text = restaurant.address;
 
 
 

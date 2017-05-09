@@ -14,46 +14,47 @@
       <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="bg.png" Aspect="AspectFill"/>
         <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
-          <StackLayout Opacity="1" Orientation="Vertical" >
+          <StackLayout  Orientation="Vertical" >
             <ListView x:Name="RestaurantListView"  HasUnevenRows="True" >
               <ListView.ItemTemplate>
                 <DataTemplate>
                   <ViewCell>
                     <StackLayout Spacing="0" Padding="7,7,7,0">
-                      <StackLayout Orientation="Horizontal" BackgroundColor="White" >
+                      <StackLayout  Orientation="Horizontal" BackgroundColor="White" >
                         <Image Source="{Binding img}"  HeightRequest="80" WidthRequest="80"/>
                             <StackLayout Orientation="Vertical">                   
-                            <Label  Text="{Binding name}" FontSize="14" TextColor="Black"  FontFamily="Times New Roman"/>
-                             <Label Text="{Binding price}" FontSize="12" TextColor="Green"/>                         
-                      </StackLayout> 
+                            <Label  Text="{Binding name}" FontSize="14" TextColor="Green"  FontFamily="Times New Roman"/>
+                            <Label  Text="{Binding begin, StringFormat='{0:yyyy-MM-dd hh:mm:ss}'}" FontSize="12" TextColor="Gray"  FontFamily="Times New Roman"/>
+                            
+                       </StackLayout> 
                       </StackLayout>
                     </StackLayout>
                   </ViewCell>
                 </DataTemplate>
               </ListView.ItemTemplate>
             </ListView>
-            
-            
 
-            <StackLayout Orientation="Horizontal" Opacity="0.7" HorizontalOptions="FillAndExpand" BackgroundColor="White">
-              <Grid >
-                <Image Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" Source="tajine.png" >
+         <StackLayout Orientation="Horizontal" Opacity="0.7" HorizontalOptions="FillAndExpand" BackgroundColor="White" Spacing="0" Padding="10,0,10,0">
+           <Grid >         
+                <Image Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" Source="all.png" >
                   <Image.GestureRecognizers>
                     <TapGestureRecognizer x:Name="tapImage" NumberOfTapsRequired="1" />
                   </Image.GestureRecognizers>
                 </Image>
-                <BoxView HeightRequest="1" Grid.Column="1"  BackgroundColor="White" VerticalOptions="Fill"/>
-                <Image Grid.Row="0" Grid.Column="3" HeightRequest="40" WidthRequest="40" Source="tajine.png" >
+               
+                <Image Grid.Row="0" Grid.Column="3" HeightRequest="40" WidthRequest="40" Source="couscous.png" >
                   <Image.GestureRecognizers>
                     <TapGestureRecognizer x:Name="tapImage1" NumberOfTapsRequired="1" />
                   </Image.GestureRecognizers>
                 </Image>
-                <Image  Grid.Row="0" Grid.Column="6" HeightRequest="40" WidthRequest="40" Source="tajine.png"  >
+               
+                <Image  Grid.Row="0" Grid.Column="6" HeightRequest="40" WidthRequest="40" Source="sandwish.png"  >
                   <Image.GestureRecognizers>
                     <TapGestureRecognizer x:Name="tapImage2" NumberOfTapsRequired="1" />
                   </Image.GestureRecognizers>
                 </Image>
-                <Image  Grid.Row="0" Grid.Column="9" HeightRequest="40" WidthRequest="40" Source="tajine.png" >
+               <!--<BoxView Grid.Column="7" Grid.Row="0"   BackgroundColor="Black" WidthRequest="1" VerticalOptions="Start" HorizontalOptions="End"/>-->
+                <Image  Grid.Row="0" Grid.Column="9" HeightRequest="40" WidthRequest="40" Source="machawi.png" >
                   <Image.GestureRecognizers>
                     <TapGestureRecognizer x:Name="tapImage3" NumberOfTapsRequired="1" />
                   </Image.GestureRecognizers>
@@ -62,9 +63,9 @@
             </StackLayout>
             
           </StackLayout>
-        
-
-        </ScrollView>
+               
+            </ScrollView>
+          
       <ContentView x:Name="bgLayer"
                      BackgroundColor="Black"
                      Opacity="0.5"
@@ -86,7 +87,9 @@
                        XAlign="Center" />
             </StackLayout>
         </Frame>
-      </AbsoluteLayout>
+           
+        </AbsoluteLayout>
+        
     </ContentPage.Content>
 
    
