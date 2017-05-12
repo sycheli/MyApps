@@ -34,8 +34,11 @@ namespace MyApps
                 {
                     App.IsUserLoggedIn = true;
 
-                    Navigation.InsertPageBefore(new SideDrawer(), Navigation.NavigationStack.First());
-                    await Navigation.PopToRootAsync();
+                    Application.Current.MainPage = new NavigationPage(new SideDrawer())
+                    {
+                        BarBackgroundColor = Color.FromHex("#00B0CD"),
+                        BarTextColor = Color.White,
+                    };
                 }
             }
             else

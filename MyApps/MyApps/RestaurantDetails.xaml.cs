@@ -11,17 +11,19 @@ namespace MyApps
 {
     public partial class RestaurantDetails : ContentPage
     {
+        string stringVal;
         Restaurant restaurant;
+
         public RestaurantDetails(Restaurant restaurant)
         {
             Title = restaurant.name;
             this.restaurant = restaurant;
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
-            tapAdress.Tapped += async (object sender, EventArgs e) =>
-            {
-                await Navigation.PushAsync(new MapPage());
-            };
+           NavigationPage.SetHasNavigationBar(this, false);
+            //tapAdress.Tapped += async (object sender, EventArgs e) =>
+            //{
+            //    await Navigation.PushAsync(new MapPage());
+            //};
         }
 
         public static List<Restaurant> Restaurants;
@@ -33,7 +35,11 @@ namespace MyApps
             restaurants.Add(restaurant);
             name.Text = restaurant.name;
             image.Source = restaurant.cover;
-            //Address.Text = restaurant.address;
+            street.Text = restaurant.address.street;
+            city.Text = restaurant.address.city;
+            country.Text = restaurant.address.country;
+            stringVal = System.Convert.ToString(restaurant.address.zipCode);
+            zipCode.Text = stringVal;
 
 
 

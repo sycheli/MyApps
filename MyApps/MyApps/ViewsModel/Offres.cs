@@ -18,10 +18,8 @@ namespace MyApps.ViewsModel
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public DateTime begin { get; set; }
-
-
-
-
-
+        public double discount { get; set; }
     }
+    
+   
 }

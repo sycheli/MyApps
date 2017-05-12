@@ -21,13 +21,7 @@
                       <StackLayout Orientation="Vertical">                        
                        <Label Text="{Binding name}" FontSize="16" TextColor="Green" FontFamily="Times New Roman"/>
                        
-                        <StackLayout Orientation="Horizontal">
-                         <Image Source="marker1.png"/>  
-                         <Label Text="{Binding address.street}" FontSize="9" TextColor="Black" FontFamily="Times New Roman"/>
-                         <Label Text="{Binding address.city}" FontSize="9" TextColor="Black" FontFamily="Times New Roman"/>
-                         <Label Text="{Binding address.country}" FontSize="9" TextColor="Black" FontFamily="Times New Roman"/>
-                         <Label Text="{Binding address.zipCode}" FontSize="9" TextColor="Black" FontFamily="Times New Roman"/>
-                        </StackLayout>        
+                         
                       </StackLayout>
                     </StackLayout>
 

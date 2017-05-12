@@ -19,14 +19,16 @@
               <ListView.ItemTemplate>
                 <DataTemplate>
                   <ViewCell>
-                    <StackLayout Spacing="0" Padding="7,7,7,0">
+                    <StackLayout Spacing="0" Padding="7,7,7,0" >
                       <StackLayout  Orientation="Horizontal" BackgroundColor="White" >
-                        <Image Source="{Binding img}"  HeightRequest="80" WidthRequest="80"/>
-                            <StackLayout Orientation="Vertical">                   
-                            <Label  Text="{Binding name}" FontSize="14" TextColor="Green"  FontFamily="Times New Roman"/>
-                            <Label  Text="{Binding begin, StringFormat='{0:yyyy-MM-dd hh:mm:ss}'}" FontSize="12" TextColor="Gray"  FontFamily="Times New Roman"/>
-                            
-                       </StackLayout> 
+                        <Image Source="{Binding img}"  HeightRequest="80" WidthRequest="80"/> 
+                          <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="0,0,5,0">
+                           <Label Text="{Binding name}" FontSize="14" TextColor="Green"  FontFamily="Times New Roman"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                <Label Text="{Binding discount}" FontSize="14" FontFamily="Times New Roman" TextColor="Red" XAlign="End" /> 
+                                <Label Text="%" FontSize="14" FontFamily="Times New Roman" TextColor="Red" XAlign="End" />
+                            </StackLayout>  
+                            </StackLayout>
                       </StackLayout>
                     </StackLayout>
                   </ViewCell>

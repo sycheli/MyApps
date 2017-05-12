@@ -24,6 +24,7 @@ namespace MyApps.Views
                     await Task.Delay(2000);
                     n++;
                     await Navigation.PushAsync(new NavigationPage(new RestaurantDetails(rest)));
+                    
                     frameLayer.IsVisible = false;
                     bgLayer.IsVisible = false;
 

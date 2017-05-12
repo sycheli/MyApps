@@ -36,10 +36,10 @@ namespace MyApps.Views
                     RestaurantListView.SelectedItem = null;
             };
 
-            //tapImage.Tapped += async (object sender, EventArgs e) =>
-            //{
-            //          await Navigation.PushAsync(new MapPage());
-            //};
+            tapImage.Tapped += async (object sender, EventArgs e) =>
+            {
+                await GetRestaurant();
+            };
         }
         protected override async void OnAppearing()
         {           
@@ -54,19 +54,16 @@ namespace MyApps.Views
             return Offre;
         }
 
+
         public static List<Offres> Offres;
         public async Task GetRestaurant()
         {
-
             var client = new HttpClient();
-
-
             var json = await client.GetStringAsync("http://10.0.3.2:51868/api/plates");
             Offres = getListFromJson(json);
             RestaurantListView.ItemsSource = Offres;
-
-            
         }
+        
         private void AbsolutePageXaml_SizeChanged(object sender, EventArgs e)
         {
             AbsoluteLayout.SetLayoutFlags(frameLayer,

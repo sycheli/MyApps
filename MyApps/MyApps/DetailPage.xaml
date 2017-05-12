@@ -17,10 +17,11 @@
                 <Label x:Name="description" Text="{Binding description}" FontFamily="Times New Roman" FontSize="12" LineBreakMode="WordWrap" XAlign="Center" />
                 <BoxView HeightRequest="1" WidthRequest="150" HorizontalOptions="Center" BackgroundColor="Gray" />
                 <Label Text="Price" FontFamily="Times New Roman" FontSize="14" TextColor="Teal" XAlign="Center" />
-
-                <Label  x:Name="price" Text="{Binding price, StringFormat='${0}'}" FontFamily="Times New Roman" FontSize="12" TextColor="Red" LineBreakMode="WordWrap" XAlign="Center" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label  x:Name="price" Text="{Binding price}" FontFamily="Times New Roman" FontSize="12" TextColor="Red" LineBreakMode="WordWrap" XAlign="Center" />
+                    <Label Text="DA" FontFamily="Times New Roman" FontSize="12" TextColor="Red" LineBreakMode="WordWrap"  />
+                </StackLayout>
                 <BoxView HeightRequest="1" WidthRequest="150" HorizontalOptions="Center" BackgroundColor="Gray" />
-                
                 <Label Text="Rate" FontFamily="Times New Roman" FontSize="14" TextColor="Teal" XAlign="Center" />
                 <Label  x:Name="rate" Text="{Binding rate}" FontFamily="Times New Roman" FontSize="12" LineBreakMode="WordWrap" XAlign="Center" />
                 <BoxView HeightRequest="1" WidthRequest="150" HorizontalOptions="Center" BackgroundColor="Gray" />
