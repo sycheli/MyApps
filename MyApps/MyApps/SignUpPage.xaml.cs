@@ -15,42 +15,6 @@ namespace MyApps
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
-        async void OnSignUpButtonClicked(object sender, EventArgs e)
-        {
-            var user = new User()
-            {
-                userName = usernameEntry.Text,
-                password = passwordEntry.Text,
-                email = emailEntry.Text
-            };
-
-
-
-            var signUpSucceeded = AreDetailsValid(user);
-            if (signUpSucceeded)
-            {
-                var rootPage = Navigation.NavigationStack.FirstOrDefault();
-                if (rootPage != null)
-                {
-                    App.IsUserLoggedIn = true;
-
-                    Application.Current.MainPage = new NavigationPage(new SideDrawer())
-                    {
-                        BarBackgroundColor = Color.FromHex("#00B0CD"),
-                        BarTextColor = Color.White,
-                    };
-                }
-            }
-            else
-            {
-                DependencyService.Get<Toast>().Show("Sign up failed");
-                
-            }
-        }
-
-        bool AreDetailsValid(User user)
-        {
-            return (!string.IsNullOrWhiteSpace(user.userName) && !string.IsNullOrWhiteSpace(user.password) && !string.IsNullOrWhiteSpace(user.email) && user.email.Contains("@"));
-        }
+        
     }
 }

@@ -7,7 +7,7 @@
              >
   
   <StackLayout BackgroundColor="White">
-    <StackLayout Padding="5,5,5,5" BackgroundColor="White">
+    <StackLayout BackgroundColor="White" Padding="5,5,5,5">
       <Image x:Name="image" Source="{Binding img}" Aspect="AspectFill" />
             <StackLayout HorizontalOptions="FillAndExpand">
                 <Label  x:Name="name" Text="{Binding name}" FontFamily="Times New Roman" TextColor="Green" FontSize="16" LineBreakMode="WordWrap" XAlign="Center" />
@@ -25,7 +25,14 @@
                 <Label Text="Rate" FontFamily="Times New Roman" FontSize="14" TextColor="Teal" XAlign="Center" />
                 <Label  x:Name="rate" Text="{Binding rate}" FontFamily="Times New Roman" FontSize="12" LineBreakMode="WordWrap" XAlign="Center" />
                 <BoxView HeightRequest="1" WidthRequest="150" HorizontalOptions="Center" BackgroundColor="Gray" />
-
+                <Label Text="Address" FontFamily="Times New Roman" FontSize="14" TextColor="Teal" XAlign="Center" />
+                <!--<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Image Source="marker1.png"/>
+                    <Label x:Name="street" Text="{Binding address.street}" FontSize="10" TextColor="Black" FontFamily="Times New Roman"/>
+                    <Label x:Name="city" Text="{Binding address.city}" FontSize="10" TextColor="Black" FontFamily="Times New Roman"/>
+                    <Label x:Name="country" Text="{Binding address.country}" FontSize="10" TextColor="Black" FontFamily="Times New Roman"/>
+                    <Label x:Name="zipCode" Text="{Binding address.zipCode}" FontSize="10" TextColor="Black" FontFamily="Times New Roman"/>
+                </StackLayout>-->
 
             </StackLayout>
             
@@ -92,9 +99,9 @@
                                     Path=IsStarred}"/>
             </Grid>
         </StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30" VerticalOptions="EndAndExpand" >
-      <Button Text="Commander" TextColor="White" BackgroundColor="#1FBED6" BorderColor="White" BorderRadius="15" BorderWidth="2" HeightRequest="40" WidthRequest="150" />
-      <Button Text="Aller à" TextColor="White"  BackgroundColor="#1FBED6" BorderColor="White" BorderRadius="15" BorderWidth="2"  HeightRequest="40" WidthRequest="150" Clicked="Allerà"/>
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="WhiteSmoke" Spacing="0" Padding="10,0,10,0" VerticalOptions="EndAndExpand" >
+      <Button Text="Commander" TextColor="White" BackgroundColor="#00B0CD" BorderColor="Black" BorderRadius="15" BorderWidth="2" HeightRequest="40" WidthRequest="250" HorizontalOptions="CenterAndExpand" />
+      
 
     </StackLayout>
   </StackLayout>

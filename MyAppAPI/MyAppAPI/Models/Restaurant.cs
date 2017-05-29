@@ -20,7 +20,7 @@ namespace MyAppAPI.Models
         public int id { get; set; }
         [Required]
         public string name { get; set; }
-        public Double rate { get; set; }
+        public double rate { get; set; }
         public string img { get; set; }
         public string cover { get; set; }
         public int WinPointMin { get; set; }

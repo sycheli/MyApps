@@ -14,12 +14,10 @@ namespace MyApps.ViewsModel
         public string description { get; set; }
         public string img { get; set; }
         public double pointValue { get; set; }
-        public string Address { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
         public DateTime begin { get; set; }
         public double discount { get; set; }
+        
     }
     
-   
+
 }

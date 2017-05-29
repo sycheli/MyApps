@@ -12,6 +12,7 @@ namespace MyApps
         Offres Ofrre;
         string stringVal;
         string stringVal1;
+        
         public DetailPage(Offres Ofrre)
         {
             Title = Ofrre.name;
@@ -41,14 +42,9 @@ namespace MyApps
             rate.Text = stringVal1;
             
 
-
         }
         
-         protected void Allerà(object sender, EventArgs e)
-        {
-
-            //await Navigation.PushAsync(new MapPages(restaurant));
-        }
+         
 
 
     }

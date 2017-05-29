@@ -19,7 +19,7 @@ namespace MyAppAPI.Models
         [Key]
         public int id { get; set; }
         [Required]
-        public Double reservationPrice { get; set; }
+        public double reservationPrice { get; set; }
         public DateTime reservationDate { get; set; }
         public DateTime deliveryDate { get; set; }
         public string state { get; set; }

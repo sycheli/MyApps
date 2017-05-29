@@ -19,40 +19,13 @@ namespace MyApps
             NavigationPage.SetHasNavigationBar(this, false);
             
         }
-          void OnLoginButtonClicked(object sender, EventArgs e)
+        public void OnLogin(object sender, EventArgs e)
         {
-            var user = new User
+            Application.Current.MainPage = new NavigationPage(new SideDrawer())
             {
-                userName = usernameEntry.Text,
-                password = passwordEntry.Text
+                BarBackgroundColor = Color.FromHex("#00B0CD"),
+                BarTextColor = Color.White,
             };
-
-            var isValid = AreCredentialsCorrect(user);
-            if (isValid)
-            {
-                App.IsUserLoggedIn = true;
-
-
-                Application.Current.MainPage = new NavigationPage(new SideDrawer())
-                {
-                    BarBackgroundColor = Color.FromHex("#00B0CD"),
-                    BarTextColor = Color.White,
-                };
-                
-
-            }
-            else
-            {
-                DependencyService.Get<Toast>().Show("Login failed");
-                
-                passwordEntry.Text = string.Empty;
-            }
         }
-
-        bool AreCredentialsCorrect(User user)
-        {
-            return user.userName == Constants.Username && user.password == Constants.Password;
-        }
-        
     }
 }

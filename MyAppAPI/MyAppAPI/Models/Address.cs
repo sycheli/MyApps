@@ -14,11 +14,11 @@ namespace MyAppAPI.Models
         //public int id { get; set; }
 
         public string street { get; set; }
-        public Double zipCode { get; set; }
+        public double zipCode { get; set; }
         public string city { get; set; }
         public string country { get; set; }
-        public Double latitude { get; set; }
-        public Double longitude { get; set; }
+        public double latitude { get; set; }
+        public double longitude { get; set; }
 
         /* [ForeignKey("User")]
         public int? userId { get; set; }

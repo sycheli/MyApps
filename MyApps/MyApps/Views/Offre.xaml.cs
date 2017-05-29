@@ -70,8 +70,7 @@ namespace MyApps.Views
                 AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(frameLayer,
                 new Rectangle(0.5d, 0.5d,
-                Device.OnPlatform(AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize, this.Width), AbsoluteLayout.AutoSize));
-
+           Device.OnPlatform(AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize, Width), AbsoluteLayout.AutoSize));
             AbsoluteLayout.SetLayoutFlags(bgLayer,
                 AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(bgLayer,

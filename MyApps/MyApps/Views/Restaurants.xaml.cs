@@ -39,7 +39,7 @@ namespace MyApps.Views
         {
             await GetRestaurant();
         }
-        List<Restaurant> getListFromJson(string json)
+        public List<Restaurant> getListFromJson(string json)
         {
             var Restaurants = JsonConvert.DeserializeObject<List<Restaurant>>(json);
 
@@ -50,15 +50,10 @@ namespace MyApps.Views
         public static List<Restaurant> Restaurant;
         public async Task GetRestaurant()
         {
-
             var client = new HttpClient();
-
-
             var json = await client.GetStringAsync("http://10.0.3.2:51868/api/restaurants");
             Restaurant = getListFromJson(json);
             RestaurantListView.ItemsSource = Restaurant;
-
-            
         }
         private void AbsolutePageXaml_SizeChanged(object sender, EventArgs e)
         {
@@ -67,7 +62,6 @@ namespace MyApps.Views
             AbsoluteLayout.SetLayoutBounds(frameLayer,
                 new Rectangle(0.5d, 0.5d,
                 Device.OnPlatform(AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize, this.Width), AbsoluteLayout.AutoSize));
-
             AbsoluteLayout.SetLayoutFlags(bgLayer,
                 AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(bgLayer,

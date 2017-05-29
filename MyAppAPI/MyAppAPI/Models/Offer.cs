@@ -12,7 +12,7 @@ namespace MyAppAPI.Models
         [Key]
         public int id { get; set; }
         [Required]
-        public Double discount { get; set; }
+        public double discount { get; set; }
 
         [ForeignKey("Plate")]
         public int? PlateId { get; set; }

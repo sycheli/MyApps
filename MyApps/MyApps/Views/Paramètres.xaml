@@ -5,7 +5,20 @@
              xmlns:views="clr-namespace:MyApps.Views;assembly=MyApps.Views"
              Title="Paramètres">
 
-  
-  
-  
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="bg.png" Aspect="AspectFill"/>
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <SwitchCell Text="On" On="true" />
+                        <SwitchCell Text="Off" On="false" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+
+
+
 </ContentPage>

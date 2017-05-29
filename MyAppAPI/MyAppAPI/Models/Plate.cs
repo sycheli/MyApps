@@ -19,8 +19,8 @@ namespace MyAppAPI.Models
         public int id { get; set; }
         [Required]
         public string name { get; set; }
-        public Double price { get; set; }
-        public Double rate { get; set; }
+        public double price { get; set; }
+        public double rate { get; set; }
         public string description { get; set; }
         public string img { get; set; }
         public int pointValue { get; set; }

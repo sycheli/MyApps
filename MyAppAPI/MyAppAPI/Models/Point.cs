@@ -12,7 +12,7 @@ namespace MyAppAPI.Models
     {
        [Key]
         public int id { get; set; }
-        public Double value { get; set; }
+        public double value { get; set; }
         public DateTime lastUpdate { get; set; }
 
        [ForeignKey("Restaurant")]

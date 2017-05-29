@@ -14,25 +14,23 @@ namespace MyApps.Views
 {
     public partial class MapPage : ContentPage
     {
-        
+    
+        Position MyPosition = new Position(36.244998, 6.570788);
         public MapPage()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             
         }
-
-        Position MyPosition = new Position(36.244998, 6.570788);
-        protected override async  void OnAppearing()
+        
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
             var locator = CrossGeolocator.Current;
             locator.DesiredAccuracy = 50;
             var pos = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
             MainMap.MoveToRegion(MapSpan.FromCenterAndRadius(MyPosition, Distance.FromKilometers(1)));
-
-            List<Restaurant> restaurants = Restaurants.Restaurant;
-            
+           List<Restaurant> restaurants = Restaurants.Restaurant;
             foreach (Restaurant r in restaurants)
             {
                 
